@@ -1,0 +1,47 @@
+body{
+    background-color: #FAFAFA;
+}
+
+p{
+    font-family: ;
+    font-size: 20px;
+}
+
+li{
+    
+}
+
+#header{
+    background: -webkit-linear-gradient(#E5E5E5, rgba(252,172,194, 0.4)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#E5E5E5, rgba(252,172,194, 0.4)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#E5E5E5, rgba(252,172,194, 0.4)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#E5E5E5, rgba(252,172,194, 0.4)); /* Standard syntax (must be last) */
+}
+
+#section-main-video{
+    margin-top: 0px;
+}
+
+#video{
+    z-index: -1;
+}
+
+.li-left-border{
+    border-left-color: rgb(206, 206, 206);
+    border-left-style: solid;
+    border-left-width: 1px;
+}
+.li-right-border{
+    border-right-color: rgb(206, 206, 206);
+    border-right-style: solid;
+    border-right-width: 1px;
+}
+
+.front-page-section-a{
+    background-color: #F3F3F3;
+    position: relative;
+}
+
+.front-page-section-b{
+    position: relative;
+}
