@@ -1,0 +1,21 @@
+body{
+	font-family: 'Avenir Next W01', 'Helvetica Neue', helvetica, arial, sans-serif;
+	background-color: #FFF4EC;
+}
+
+
+
+#header{
+	box-shadow: 1px 3px 5px #AAAAAA;
+	z-index: 1;
+	background-color: #FAFAFA;
+}
+
+.icon-logo{
+	position: absolute;
+	left: 50%;
+	margin-left: -12px;
+	margin-top: 14px;
+	width: 24px;
+	z-index: 1;
+}
