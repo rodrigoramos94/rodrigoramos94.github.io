@@ -1,11 +1,22 @@
 
-function eraseHeadBrowser(){
-	open('index.html', 'principal', 'location=no,menubar=no,status=no,toolbar=no'); 
-    cerrar();
+function hideAddressBar(){
+
+	if(document.height < window.outerHeight + 10){
+		document.body.style.height = (window.outerHeight + 50) + 'px';
+	}
+
+	setTimeout(function(){
+		window.scrollTo(0, 1);
+	}, 50);
+
 }
 
-function cerrar() { 
-	var ventana = window.self; 
-	ventana.opener = window.self; 
-	ventana.close(); 
-} 
+window.addEventListener("load", function(){
+
+	if(!window.pageYOffset){
+		hideAddressBar();
+	}
+
+	window.addEventListener("orientationchange", hideAddressBar);
+
+});
