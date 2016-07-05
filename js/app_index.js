@@ -1,6 +1,6 @@
 
 window.addEventListener("load",function() {
-  initial_height = documentHeight();
+  initial_height = document.body.style.height;
 });
 
 var initial_height;
@@ -14,7 +14,7 @@ function documentHeight(){
 
 function hideAddressBar(){
 
-	document.body.style.height = document.body.style.height + 1;
+	document.body.style.height = window.outerHeight;
 	
 	setTimeout(function(){
 		window.scrollTo(0, 1);
@@ -24,11 +24,6 @@ function hideAddressBar(){
 }
 
 function showAddressBar(){
-
-	window.scrollBy(0, -50);
-	window.scrollBy(0, -50);
-	document.body.style.height = window.innerHeight;
-	
 	setTimeout(function(){
 		document.body.style.height = initial_height;
 	}, 50);
