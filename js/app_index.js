@@ -14,13 +14,12 @@ function documentHeight(){
 
 function hideAddressBar(){
 
-	document.body.style.height = screen.height + 1;
+	document.body.style.height = document.body.style.height + 1;
 	
 	setTimeout(function(){
 		window.scrollTo(0, 1);
-		document.body.style.height = documentHeight();
 	}, 50);
-
+	document.body.style.height = documentHeight();
 }
 
 function showAddressBar(){
