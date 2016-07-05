@@ -17,7 +17,7 @@ function hideAddressBar(){
 	document.body.style.height = bar_size + 1;
 	
 	setTimeout(function(){
-		window.scrollBy(0, 1);
+		window.scrollBy(0, 10);
 		document.body.style.height = window.innerHeight;
 	}, 50);
 
