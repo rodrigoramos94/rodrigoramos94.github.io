@@ -20,7 +20,7 @@ function showAddressBar(){
 
 	setTimeout(function(){
 		document.body.style.height = bar_size;
-		window.scrollTo(0, 0);
+		window.scrollBy(0, -50);
 	}, 50);
 
 }
