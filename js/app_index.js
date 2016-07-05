@@ -1,9 +1,16 @@
 
 window.addEventListener("load",function() {
-  bar_size = window.innerHeight;
+  initial_height = documentHeight();
 });
 
-var bar_size;
+var initial_height;
+
+// recoge el alto actual de pantalla imprimible del browser (cualquier browser)
+function documentHeight(){
+	return h = window.innerHeight
+			|| document.documentElement.clientHeight
+			|| document.body.clientHeight;
+}
 
 function hideAddressBar(){
 
@@ -18,10 +25,12 @@ function hideAddressBar(){
 
 function showAddressBar(){
 
-	document.body.style.height = bar_size;
+	window.scrollBy(0, -50);
+	window.scrollBy(0, -50);
+	document.body.style.height = window.innerHeight;
 	
 	setTimeout(function(){
-		window.scrollBy(0, -50);
+		document.body.style.height = initial_height;
 	}, 50);
 
 }
