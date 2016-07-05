@@ -14,6 +14,15 @@ if(!window.location.hash)
   }
 }
 
+window.addEventListener("load",function() {
+  setTimeout(function(){
+    window.scrollTo(0, 1);
+  }, 0);
+	
+	document.body.style.height = window.outerHeight;
+});
+
+/*
 window.addEventListener("load", function(){
 
 	if(!window.pageYOffset){
@@ -23,3 +32,4 @@ window.addEventListener("load", function(){
 	window.addEventListener("orientationchange", hideAddressBar);
 
 });
+
