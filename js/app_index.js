@@ -1,6 +1,6 @@
 
 window.addEventListener("load",function() {
-  initial_height = document.body.style.height;
+  initial_height = documentHeight();
 });
 
 var initial_height;
