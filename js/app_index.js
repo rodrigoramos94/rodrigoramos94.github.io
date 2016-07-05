@@ -4,7 +4,6 @@ window.addEventListener("load",function() {
 });
 
 
-window.addEventListener("orientationchange", hideAddressBar);
 
 function hideAddressBar(){
 
