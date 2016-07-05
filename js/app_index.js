@@ -12,17 +12,16 @@ function hideAddressBar(){
 	setTimeout(function(){
 		document.body.style.height = document.body.style.height + 1;
 		window.scrollTo(0, 1);
-		document.body.style.height = window.outerHeight;
+		document.body.style.height = screen.height;
 	}, 50);
 
 }
 
-function hideAddressBar(){
+function showAddressBar(){
 
 	setTimeout(function(){
-		document.body.style.height = document.body.style.height + 1;
-		window.scrollTo(0, 1);
-		document.body.style.height = window.outerHeight;
+		window.scrollTo(0, -1);
+		document.body.style.height = screen.height;
 	}, 50);
 
 }
