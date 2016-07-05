@@ -1,6 +1,6 @@
 
 window.addEventListener("load",function() {
-  bar_size = document.body.style.height;
+  bar_size = window.innerHeight;
 });
 
 var bar_size;
@@ -9,9 +9,9 @@ function hideAddressBar(){
 
 	setTimeout(function(){
 		
-		document.body.style.height = screen.height + 1;
+		document.body.style.height = bar_size + 1;
 		window.scrollBy(0, 1);
-		//document.body.style.height = screen.height;
+		document.body.style.height = window.innerHeight;
 	}, 50);
 
 }
@@ -20,7 +20,7 @@ function showAddressBar(){
 
 	setTimeout(function(){
 		document.body.style.height = bar_size;
-		window.scrollBy(0, -100);
+		window.scrollTo(0, 0);
 	}, 50);
 
 }
