@@ -1,6 +1,6 @@
 
 window.addEventListener("load",function() {
-  initial_height = documentHeight();
+  	initial_height = document.getElementById('#screen').style.height;
 });
 
 var initial_height;
@@ -27,5 +27,4 @@ function showAddressBar(){
 	setTimeout(function(){
 		document.body.style.height = initial_height;
 	}, 50);
-
 }
