@@ -17,16 +17,7 @@ function hideAddressBar(){
 	document.body.style.height += documentHeight();
 	
 	setTimeout(function(){
-		window.scrollBy(0, 100);
+		window.scrollTo(0, 100);
 	}, 50);
 	
-}
-
-function showAddressBar(){
-	
-	document.body.style.height = window.innerHeight;
-	
-	setTimeout(function(){
-		window.scrollBy(-100, -100);
-	}, 50);
 }
