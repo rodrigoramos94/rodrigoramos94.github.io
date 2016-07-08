@@ -23,6 +23,9 @@ function hideAddressBar(){
 }
 
 function showAddressBar(){
+	
+	window.scrollBy(0, -100);
+	
 	setTimeout(function(){
 		document.body.style.height = initial_height;
 	}, 50);
