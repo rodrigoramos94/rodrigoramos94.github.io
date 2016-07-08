@@ -1,6 +1,6 @@
 
 window.addEventListener("load",function() {
-  	initial_height = document.getElementById('#screen').height;
+  	
 });
 
 var initial_height;
@@ -23,6 +23,8 @@ function hideAddressBar(){
 }
 
 function showAddressBar(){
+	
+	document.body.style.height = window.innerHeight;
 	
 	setTimeout(function(){
 		window.scrollBy(-100, -100);
