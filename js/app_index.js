@@ -1,6 +1,6 @@
 
 window.addEventListener("load",function() {
-  	initial_height = document.getElementById('#screen').style.height;
+  	initial_height = document.getElementById('#screen').offsetWidth;
 });
 
 var initial_height;
