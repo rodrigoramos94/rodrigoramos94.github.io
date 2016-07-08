@@ -1,24 +1,145 @@
-<html lang="es">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta http-equiv="refresh" content="20; URL=">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta charset=utf-8 />
+<!--
+Created using JS Bin
+http://jsbin.com
 
-    <meta name="author" content="Rodrigo Ramos">
+Copyright (c) 2016 by galambalazs (http://jsbin.com/xatidu/4/edit)
 
-    <title>Test</title>
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<title>Disable scrolling</title>
 
-    <script type="text/javascript" src="js\app_index.js"></script>
+<style id="jsbin-css">
 
+div.scroll {
+    background-color: #00FFFF;
+    width: 100px;
+    height: 100px;
+    overflow: scroll;
+}
+
+* { margin:0; padding:0; }
+#page { width:400px; margin:60px 20px; }
+p { margin:20px 0; }
+button { padding:2px 10px; margin-right:10px; }
+.enabled { color:green }
+.disabled { color:red }
+#menu { position:fixed; top:0; left:0; padding:10px 20px; right:0; background:#fff; border-bottom:1px solid #ccc; background:#f5f5f5; opacity:.95; }
+</style>
 </head>
-
 <body>
-
-	<div id="screen" style="background-color: red; position:fixed; top: 0; left: 0; width: 100%; height: 100%">
-		<button type="button" onclick="hideAddressBar()" style="width:100px; position: relative; left: 20%; top: 10%">Ocultar Barra</button>
-		<button type="button" onclick="showAddressBar()" style="width:100px; position: relative; left: 50%; top: 10%">Mostrar Barra</button>
+	<div id="menu">
+		<button id="enable">enable scrolling</button>
+		<button id="disable">disable scrolling</button>
+		<strong id="status" class="enabled">enabled</strong>
 	</div>
+	  
 	
+  <div id="page">
+ 
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae velit sit amet velit rhoncus mattis. Etiam placerat ipsum sit amet arcu vestibulum ultricies pellentesque urna molestie. Donec tincidunt fringilla mi, non aliquet ipsum porttitor eget. Pellentesque et lobortis nisi. Nam lectus lectus, molestie nec facilisis pellentesque, sollicitudin a neque. Etiam sed tristique eros. Sed ac sagittis urna. Etiam elementum lectus sit amet enim aliquam sit amet egestas purus tristique. Aliquam lobortis posuere dolor, vitae lobortis arcu pharetra ut. Mauris gravida cursus turpis, id placerat justo imperdiet quis. Ut fringilla molestie tristique. Vestibulum pellentesque nisl vulputate magna viverra fermentum.</p>
+
+<p>overflow:scroll</p>
+<div class="scroll">You can use the overflow property when you want to have better control of the layout. The default value is visible.</div>
+
+<p>Integer vulputate orci a massa tristique consequat. Sed vestibulum sapien at justo venenatis lacinia. Quisque ut massa mi. Quisque pellentesque tincidunt dolor a molestie. Suspendisse non arcu aliquam enim vehicula euismod et ac neque. Vestibulum quis massa mi, ac mattis turpis. Sed egestas nunc eget libero porta sed bibendum diam tristique. Maecenas orci quam, adipiscing id ornare dictum, fermentum ac tellus. Quisque luctus purus nec est tristique dapibus. Praesent posuere nunc vitae nisl accumsan accumsan. Pellentesque nunc quam, blandit et convallis ac, gravida sit amet augue. Duis ultricies, libero in pharetra lacinia, mi quam porta orci, aliquam hendrerit elit mauris eu ipsum. Suspendisse eget tellus vel orci lobortis pretium eget non justo.</p>
+
+<p>Mauris interdum tortor et sapien aliquet hendrerit. Donec vitae porttitor ligula. Nulla convallis, nibh at elementum volutpat, quam ante consequat elit, vel adipiscing libero augue id nisi. Quisque mollis neque ut leo consequat vel egestas arcu vehicula. Pellentesque in mi vel arcu volutpat gravida. Suspendisse sit amet fringilla quam. Proin ut est non nunc molestie scelerisque sed at nisl. Nullam pellentesque erat sed neque cursus blandit. In ullamcorper sem sed turpis tempor consectetur.</p>
+
+<p>Quisque quis turpis sapien. Morbi tincidunt porta arcu vitae posuere. Duis pretium dictum vulputate. Nam quis elit tortor. Vestibulum in mi a ipsum blandit fermentum eget ac neque. Maecenas est nisi, imperdiet eget rutrum vitae, suscipit vel dolor. Nunc commodo placerat nunc sed varius.</p>
+
+    <p>Fusce tempus rutrum enim, a gravida nulla porta vehicula. Maecenas id purus a diam iaculis egestas. In vestibulum, felis a iaculis sollicitudin, purus nisi faucibus metus, interdum adipiscing nisi purus placerat nibh. Phasellus eget augue quis purus gravida ornare in nec tortor. Curabitur pulvinar imperdiet erat eu accumsan. Cras volutpat dolor vel erat placerat dignissim. Nulla facilisi.</p>
+    
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae velit sit amet velit rhoncus mattis. Etiam placerat ipsum sit amet arcu vestibulum ultricies pellentesque urna molestie. Donec tincidunt fringilla mi, non aliquet ipsum porttitor eget. Pellentesque et lobortis nisi. Nam lectus lectus, molestie nec facilisis pellentesque, sollicitudin a neque. Etiam sed tristique eros. Sed ac sagittis urna. Etiam elementum lectus sit amet enim aliquam sit amet egestas purus tristique. Aliquam lobortis posuere dolor, vitae lobortis arcu pharetra ut. Mauris gravida cursus turpis, id placerat justo imperdiet quis. Ut fringilla molestie tristique. Vestibulum pellentesque nisl vulputate magna viverra fermentum.</p>
+
+<p>Integer vulputate orci a massa tristique consequat. Sed vestibulum sapien at justo venenatis lacinia. Quisque ut massa mi. Quisque pellentesque tincidunt dolor a molestie. Suspendisse non arcu aliquam enim vehicula euismod et ac neque. Vestibulum quis massa mi, ac mattis turpis. Sed egestas nunc eget libero porta sed bibendum diam tristique. Maecenas orci quam, adipiscing id ornare dictum, fermentum ac tellus. Quisque luctus purus nec est tristique dapibus. Praesent posuere nunc vitae nisl accumsan accumsan. Pellentesque nunc quam, blandit et convallis ac, gravida sit amet augue. Duis ultricies, libero in pharetra lacinia, mi quam porta orci, aliquam hendrerit elit mauris eu ipsum. Suspendisse eget tellus vel orci lobortis pretium eget non justo.</p>
+
+<p>Mauris interdum tortor et sapien aliquet hendrerit. Donec vitae porttitor ligula. Nulla convallis, nibh at elementum volutpat, quam ante consequat elit, vel adipiscing libero augue id nisi. Quisque mollis neque ut leo consequat vel egestas arcu vehicula. Pellentesque in mi vel arcu volutpat gravida. Suspendisse sit amet fringilla quam. Proin ut est non nunc molestie scelerisque sed at nisl. Nullam pellentesque erat sed neque cursus blandit. In ullamcorper sem sed turpis tempor consectetur.</p>
+
+<p>Quisque quis turpis sapien. Morbi tincidunt porta arcu vitae posuere. Duis pretium dictum vulputate. Nam quis elit tortor. Vestibulum in mi a ipsum blandit fermentum eget ac neque. Maecenas est nisi, imperdiet eget rutrum vitae, suscipit vel dolor. Nunc commodo placerat nunc sed varius.</p>
+
+    <p>Fusce tempus rutrum enim, a gravida nulla porta vehicula. Maecenas id purus a diam iaculis egestas. In vestibulum, felis a iaculis sollicitudin, purus nisi faucibus metus, interdum adipiscing nisi purus placerat nibh. Phasellus eget augue quis purus gravida ornare in nec tortor. Curabitur pulvinar imperdiet erat eu accumsan. Cras volutpat dolor vel erat placerat dignissim. Nulla facilisi.</p>
+    
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae velit sit amet velit rhoncus mattis. Etiam placerat ipsum sit amet arcu vestibulum ultricies pellentesque urna molestie. Donec tincidunt fringilla mi, non aliquet ipsum porttitor eget. Pellentesque et lobortis nisi. Nam lectus lectus, molestie nec facilisis pellentesque, sollicitudin a neque. Etiam sed tristique eros. Sed ac sagittis urna. Etiam elementum lectus sit amet enim aliquam sit amet egestas purus tristique. Aliquam lobortis posuere dolor, vitae lobortis arcu pharetra ut. Mauris gravida cursus turpis, id placerat justo imperdiet quis. Ut fringilla molestie tristique. Vestibulum pellentesque nisl vulputate magna viverra fermentum.</p>
+
+<p>Integer vulputate orci a massa tristique consequat. Sed vestibulum sapien at justo venenatis lacinia. Quisque ut massa mi. Quisque pellentesque tincidunt dolor a molestie. Suspendisse non arcu aliquam enim vehicula euismod et ac neque. Vestibulum quis massa mi, ac mattis turpis. Sed egestas nunc eget libero porta sed bibendum diam tristique. Maecenas orci quam, adipiscing id ornare dictum, fermentum ac tellus. Quisque luctus purus nec est tristique dapibus. Praesent posuere nunc vitae nisl accumsan accumsan. Pellentesque nunc quam, blandit et convallis ac, gravida sit amet augue. Duis ultricies, libero in pharetra lacinia, mi quam porta orci, aliquam hendrerit elit mauris eu ipsum. Suspendisse eget tellus vel orci lobortis pretium eget non justo.</p>
+
+<p>Mauris interdum tortor et sapien aliquet hendrerit. Donec vitae porttitor ligula. Nulla convallis, nibh at elementum volutpat, quam ante consequat elit, vel adipiscing libero augue id nisi. Quisque mollis neque ut leo consequat vel egestas arcu vehicula. Pellentesque in mi vel arcu volutpat gravida. Suspendisse sit amet fringilla quam. Proin ut est non nunc molestie scelerisque sed at nisl. Nullam pellentesque erat sed neque cursus blandit. In ullamcorper sem sed turpis tempor consectetur.</p>
+
+<p>Quisque quis turpis sapien. Morbi tincidunt porta arcu vitae posuere. Duis pretium dictum vulputate. Nam quis elit tortor. Vestibulum in mi a ipsum blandit fermentum eget ac neque. Maecenas est nisi, imperdiet eget rutrum vitae, suscipit vel dolor. Nunc commodo placerat nunc sed varius.</p>
+
+    <p>Fusce tempus rutrum enim, a gravida nulla porta vehicula. Maecenas id purus a diam iaculis egestas. In vestibulum, felis a iaculis sollicitudin, purus nisi faucibus metus, interdum adipiscing nisi purus placerat nibh. Phasellus eget augue quis purus gravida ornare in nec tortor. Curabitur pulvinar imperdiet erat eu accumsan. Cras volutpat dolor vel erat placerat dignissim. Nulla facilisi.</p>
+    
+  </div>
+  
+<script>
+document.getElementById("enable").onclick = function() {
+  enableScroll();
+  document.getElementById("status").innerHTML = "enabled";
+    document.getElementById("status").className = "enabled";
+};
+
+document.getElementById("disable").onclick = function() {
+  disableScroll();
+  document.getElementById("status").innerHTML = "disabled";
+  document.getElementById("status").className = "disabled";
+};
+
+
+
+// left: 37, up: 38, right: 39, down: 40,
+// spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+
+function preventDefault(e) {
+  e = e || window.event;
+  if (e.preventDefault)
+      e.preventDefault();
+  e.returnValue = false;  
+}
+
+function preventDefaultForScrollKeys(e) {
+    if (keys[e.keyCode]) {
+        preventDefault(e);
+        return false;
+    }
+}
+
+function disableScroll() {
+  if (window.addEventListener) // older FF
+      window.addEventListener('DOMMouseScroll', preventDefault, false);
+  window.onwheel = preventDefault; // modern standard
+  window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+  window.ontouchmove  = preventDefault; // mobile
+  document.onkeydown  = preventDefaultForScrollKeys;
+}
+
+function enableScroll() {
+    if (window.removeEventListener)
+        window.removeEventListener('DOMMouseScroll', preventDefault, false);
+    window.onmousewheel = document.onmousewheel = null; 
+    window.onwheel = null; 
+    window.ontouchmove = null;  
+    document.onkeydown = null;  
+}
+</script>
+<script src="http://static.jsbin.com/js/render/edit.js?3.36.11"></script>
+<script>jsbinShowEdit && jsbinShowEdit({"static":"http://static.jsbin.com","root":"http://jsbin.com"});</script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-1656750-34', 'jsbin.com');
+ga('require', 'linkid', 'linkid.js');
+ga('require', 'displayfeatures');
+ga('send', 'pageview');
+
+</script>
+
 </body>
+</html>
