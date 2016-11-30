@@ -1,0 +1,75 @@
+﻿extends layout
+
+block head
+    link(rel='stylesheet', type='text/css', href='/stylesheets/ammaps-style1.css')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/style-markets.css')
+    script(src='/javascripts/markets-maps1.js')
+    script(src='/javascripts/markets-chart1.js')
+    script(src='/javascripts/markets.js')
+
+block content
+    h2#title #{title}
+    hr.divisoria
+    // PRINCIPAL MARKETS INDEXES
+    #indexes-box
+        .container
+            h3 Índices Bursátiles
+            span.subtitle Crecimiento diario de los índices mas importantes
+            br
+            br
+            .row
+                // Grafica
+                for val in indexes_list
+                    .col-sm-3.col-xs-6
+                        div(onclick="location.href='/market/#{val.name}'").cards
+                            h4.index-name.center-text #{val.name}
+                            if val.growth > 0
+                                img.index-image.img-responsive.center-image(src='../images/positive_trend.svg')
+                                h4.index-pos-value.center-text ( #{val.growth}% )
+                            else
+                                img.index-image.img-responsive.center-image(src='../images/negative_trend.svg')
+                                h4.index-neg-value.center-text ( #{val.growth}% )
+    br
+    #random-stocks-box
+        h3 Valores de Empresas Españolas
+        span.subtitle Cotizaciones en Bolsa de algunas compañías del IBEX-35
+        br
+        #stocks-chart
+    hr.divisoria
+    #markets-list-box
+        h3 Listado de Mercados
+        span.subtitle Conjunto de los mercados disponibles
+        br
+        br
+        .table-responsive
+            table.table.table-bordered.table-hover
+                thead
+                    th Name
+                    th Country
+                    th Value (€)
+                    th Age (years)
+                tbody
+                    tr(onclick="window.document.location='/market/Repsol'")
+                        td Repsol
+                        td España
+                        td 5,46
+                        td 87
+                    tr.warning
+                        td OHL
+                        td España
+                        td 13,96
+                        td 32
+                    tr(onclick="window.document.location='/market/Telefonica'")
+                        td Telefonica
+                        td España
+                        td 8,24
+                        td 46
+    hr.divisoria
+    // MAPAMUNDI INDEXES
+    #mapamundi-box
+        h3 Los Índices en el Mapa
+        span.subtitle Localización en el mundo de los índices mas importantes
+        br
+        br
+        #mapamundi-chart
+block scripts

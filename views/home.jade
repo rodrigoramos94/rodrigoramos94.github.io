@@ -1,0 +1,29 @@
+﻿extends layout
+
+block head
+    link(rel='stylesheet', type='text/css', href='/stylesheets/style-home.css')
+    script(src='/javascripts/modernizr-2.6.2.js')
+    script(src='/javascripts/home-chart1.js')    
+
+block content
+    br
+    #personal-box.container
+        h2.center-text Hola #{user.name}, esta es tu situación actual
+        br
+        .row
+            .col-md-6
+                p PRUEBA PRUEBA PRUENAB
+            .col-md-6
+                p prueba prueba prueba
+
+    hr.divisoria
+    #treasure-box
+        .container
+            h2 Tu Tesoro
+            span.subtitle Ingresos + Beneficios - Retiradas
+        br
+        #treasure-chart.container
+    hr.divisoria
+
+
+block scripts

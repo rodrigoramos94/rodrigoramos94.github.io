@@ -1,0 +1,14 @@
+﻿/*
+    Carousel
+*/
+div.carousel-inner{
+    height: 200px;
+}
+.carousel-inner{
+    background-image: url(../images/fondo3.jpg);
+    background-size: 100%;
+}
+img.img-carousel{
+    width: auto;
+    z-index: -1;
+}

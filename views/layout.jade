@@ -1,0 +1,89 @@
+﻿doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title #{title} - CloverElf
+    link(rel='shotcut icon' href='../images/trebol4.ico')
+    
+    // Am-Charts-Maps Resources
+    script(src="https://www.amcharts.com/lib/3/amcharts.js")
+    script(src="https://www.amcharts.com/lib/3/serial.js")
+    script(src="https://www.amcharts.com/lib/3/ammap.js")
+    script(src="https://www.amcharts.com/lib/3/maps/js/worldLow.js")
+    script(src="https://www.amcharts.com/lib/3/plugins/export/export.min.js")
+    link(rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all")
+    script(src="https://www.amcharts.com/lib/3/themes/light.js")
+    
+    link(rel='stylesheet', type='text/css', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/style.css')
+    script(src='/javascripts/modernizr-2.6.2.js')
+    
+    block head
+  body
+    #navbar.navbar.navbar-inverse.navbar-fixed-top
+      #navbar-container.container-fluid
+        .navbar-header
+          a#brand-logo.navbar-brand(href='/home')
+            img.img-responsive(src='../images/trebol4.png' width='40px' heigth='40px')
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar 
+        .navbar-collapse.collapse
+            ul.nav.navbar-nav
+                if title == "Home"
+                    li.active
+                        a(href='/home') Home
+                else
+                    li
+                        a(href='/home') Home
+                if title == "Panel de Mercados"
+                    li.active
+                        a(href='/markets') Mercados
+                else
+                    li
+                        a(href='/markets') Mercados 
+                if title == "Panel de Operaciones"
+                    li.active
+                        a(href='/trades') Operaciones
+                else
+                    li
+                        a(href='/trades') Operaciones
+
+            hr.visible-xs
+            ul.nav.navbar-nav.navbar-right
+                li
+                    a(href='/') 
+                        span.glyphicon.glyphicon-user
+                        |   Bienvenido, #{user.username}
+                li.dropdown
+                    a.dropdown-toggle(data-toggle="dropdown" href="#")
+                        span.glyphicon.glyphicon-cog
+                        span.caret
+                    ul.dropdown-menu
+                      li
+                        a(href="#") Page 1-1
+                      li
+                        a(href="#") Page 1-2
+                      li
+                        a(href="#") Page 1-3 
+                        
+    #body-container.container.body-content
+      br
+      block content
+      br
+      hr.divisoria
+      footer
+        .col-sm-6 
+            p &copy; #{year} - Clover Elf Trading
+        .col-sm-6-.pull-right
+            button.btn-link(href='/about') Sobre Nosotros
+            button.btn-link(href='/contact') Contacto
+
+    script(src='/javascripts/jquery-1.10.2.js')
+    script(src='/javascripts/bootstrap.js')
+    script(src='/javascripts/respond.js')
+
+    block scripts

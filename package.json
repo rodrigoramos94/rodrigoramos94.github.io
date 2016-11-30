@@ -1,0 +1,15 @@
+{
+  "name": "duende",
+  "version": "0.0.0",
+  "description": "Duende",
+  "main": "app.js",
+  "author": {
+    "name": "Rodrigo Ramos"
+  },
+  "dependencies": {
+    "amcharts": "^3.14.5",
+    "ammaps": "^3.14.5",
+    "express": "3.4.4",
+    "jade": "*"
+  }
+}

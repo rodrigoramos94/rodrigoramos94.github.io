@@ -1,0 +1,37 @@
+﻿doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title #{title} - CloverElf
+    link(rel='shotcut icon' href='../images/trebol4.ico')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/style-login.css')
+    script(src='/javascripts/modernizr-2.6.2.js')
+  
+  body
+    div#general-box.container
+        div#image-box.container
+            img.img-responsive(src='../images/trebol4.png' alt='Logo Image' width='150px')
+            h1 Cloverelf Trading
+            br
+        div#login-box.container
+            div.row
+                h2 Login
+                hr
+                form#login-form(action="/home" method="get" enctype="multipart/form-data")
+                    div.input-group.input-group-lg
+                        span.input-group-addon(id='input-username')
+                            img(src='../images/user-icon-24.png' alt='user' width='22px')
+                        input.form-control.input-lg(type='text' id='input-username' placeholder='Username')
+                    br
+                    div.input-group.input-group-lg
+                        span.input-group-addon(id='input-password')
+                            img(src='../images/locker-lock-24.png' alt='lock' width='22px')
+                        input.form-control(type='password' id='input-password' placeholder='Password')
+                    br
+                    input.btn.btn-lg.btn-success.btn-block(type="submit" id="login" value="Login »")
+                br
+    footer
+        p &copy; #{year} - Cloverelf
+

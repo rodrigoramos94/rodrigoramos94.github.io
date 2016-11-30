@@ -1,0 +1,44 @@
+body {
+  background: url("../images/fondo9.jpg") no-repeat center center fixed;
+  background-position: adjust;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+img {
+  margin-left: auto;
+  margin-right: auto;
+}
+footer {
+  color: #fff;
+  position: fixed;
+  bottom: 0px;
+  left: 20px;
+}
+#login-form {
+  max-width: 700px;
+}
+#general-box {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 6%;
+  padding: 0px 0px 0px 0px;
+  border-radius: 20px;
+}
+#image-box {
+  text-align: center;
+  color: #fff;
+}
+#login-box {
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 20px;
+  padding: 10px 10px 10px 10px;
+  margin: 0px 10px 10px 10px;
+}
+div.row {
+  margin: 0px 20px 0px 20px;
+}
+div.input-group.input-group-lg {
+  width: 100%;
+}
